@@ -65,7 +65,8 @@ mmu_section_t mmu_section_table[] = {
 
 void platform_early_init(void)
 {
-#if 0 /* disabled */
+#if WITH_DEBUG_UART
+	apq_gpio_set(58, 1); // enable UART
 	uart_init(target_uart_gsbi());
 #endif
 	qgic_init();

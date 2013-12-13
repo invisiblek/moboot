@@ -59,17 +59,14 @@ void gpio_config_uart_dm(uint8_t id)
 {
 	switch (id)
 	{
-	case GSBI_ID_3:
-
-		/* configure rx gpio */
-		gpio_tlmm_config(15, 1, GPIO_INPUT, GPIO_NO_PULL,
-						 GPIO_8MA, GPIO_DISABLE);
-
-		/* configure tx gpio */
-		gpio_tlmm_config(14, 1, GPIO_OUTPUT, GPIO_NO_PULL,
-						 GPIO_8MA, GPIO_DISABLE);
-		break;
-
+        case GSBI_ID_12:
+                /* configure rx gpio */
+                gpio_tlmm_config(117, 2, GPIO_INPUT, GPIO_NO_PULL,
+                                 GPIO_8MA, GPIO_DISABLE);
+                /* configure tx gpio */
+                gpio_tlmm_config(118, 2, GPIO_OUTPUT, GPIO_NO_PULL,
+                                 GPIO_8MA, GPIO_DISABLE);
+                break;
 	default:
 		ASSERT(0);
 	}

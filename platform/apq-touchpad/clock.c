@@ -88,13 +88,13 @@ void clock_config_uart_dm(uint8_t id)
 	/* Enable gsbi_uart_clk */
 	clock_config(UART_DM_CLK_NS_115200,
 				 UART_DM_CLK_MD_115200,
-				 GSBIn_QUP_APPS_NS(id),
-				 GSBIn_QUP_APPS_MD(id));
+				 GSBIn_UART_APPS_NS(id),
+				 GSBIn_UART_APPS_MD(id));
 
 	/* Configure clock selection register for tx and rx rates.
 	 * Selecting 115.2k for both RX and TX.
 	 */
-	writel(UART_DM_CLK_RX_TX_BIT_RATE, MSM_BOOT_UART_DM_CSR(id));
+	writel(UART_DM_CLK_RX_TX_BIT_RATE_28800, MSM_BOOT_UART_DM_CSR(id));
 
 	/* Enable gsbi_pclk */
 	writel(GSBI_HCLK_CTL_CLK_ENA << GSBI_HCLK_CTL_S, GSBIn_HCLK_CTL(id));

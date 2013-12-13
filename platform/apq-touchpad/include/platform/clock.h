@@ -34,10 +34,11 @@
 #define USB_XCVR_CLK_MD_VAL        0x000500DF
 
 /* NS/MD value for UART */
-#define UART_DM_CLK_NS_115200      0xFFE40040
-#define UART_DM_CLK_MD_115200      0x0002FFE2
+#define UART_DM_CLK_NS_115200      0xFD9A0043
+#define UART_DM_CLK_MD_115200      0x000CFD8E
 
-#define UART_DM_CLK_RX_TX_BIT_RATE 0xFF
+#define UART_DM_CLK_RX_TX_BIT_RATE_28800 0xCC // => baud_rate == 4 * clock_rate == 115200
+#define UART_DM_CLK_RX_TX_BIT_RATE_115200 0xFF
 
 /* NS/MD value for MMC */
 #define SDC_CLK_NS_400KHZ          0x00440040

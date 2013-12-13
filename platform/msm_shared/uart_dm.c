@@ -145,7 +145,7 @@ static unsigned int msm_boot_uart_dm_gsbi_init(uint8_t id)
 	/* Configure clock selection register for tx and rx rates.
 	 * Selecting 115.2k for both RX and TX.
 	 */
-	writel(UART_DM_CLK_RX_TX_BIT_RATE, MSM_BOOT_UART_DM_CSR(id));
+	writel(UART_DM_CLK_RX_TX_BIT_RATE_28800, MSM_BOOT_UART_DM_CSR(id));
 
     return MSM_BOOT_UART_DM_E_SUCCESS;
 }

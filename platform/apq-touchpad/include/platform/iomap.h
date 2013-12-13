@@ -104,7 +104,7 @@
 
 /* GSBI/QUP/UART_DM */
 #define GSBI_BASE(id)           ((id) <= 7 ? (0x16000000 + (((id)-1) << 20)) : \
-                                             (0x1A000000 + (((id)-8) << 20)))
+                                             (0x19800000 + (((id)-8) << 20)))
 #define GSBI_UART_DM_BASE(id)   (GSBI_BASE(id) + 0x40000)
 #define QUP_BASE(id)            (GSBI_BASE(id) + 0x80000)
 

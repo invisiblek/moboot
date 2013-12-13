@@ -61,7 +61,7 @@ static unsigned mmc_sdc_base[] =
 };
 
 static pm8921_dev_t pmic;
-static const uint8_t uart_gsbi_id  = GSBI_ID_3;
+static const uint8_t uart_gsbi_id  = GSBI_ID_12;
 
 enum topaz_board_types {
 	TOPAZ_PROTO = 0,
