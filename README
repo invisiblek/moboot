@@ -6,3 +6,7 @@ TBD
 fnd98109mob.ver
 
 
+Instructions:
+1. Make sure you have the arm-eabi-4.4.3 toolchain, it should be in: /opt/toolchains/
+2. Run: make apq-touchpad
+3. build-apq-touchpad/lk.uImage is the file you want
